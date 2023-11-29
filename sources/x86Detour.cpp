@@ -27,13 +27,13 @@ bool x86Detour::hook() {
         return false;
     }
 
-    if (!followJmp(insts)) {
-        Log::log("Prologue jmp resolution failed", ErrorLevel::SEV);
-        return false;
-    }
-
-    // update given fn address to resolved one
-    m_fnAddress = insts.front().getAddress();
+//    if (!followJmp(insts)) {
+//        Log::log("Prologue jmp resolution failed", ErrorLevel::SEV);
+//        return false;
+//    }
+//
+//    // update given fn address to resolved one
+//    m_fnAddress = insts.front().getAddress();
 
     // --------------- END RECURSIVE JMP RESOLUTION ---------------------
 

@@ -329,13 +329,13 @@ bool x64Detour::hook() {
         return false;
     }
 
-    if (!followJmp(insts)) {
-        Log::log("Prologue jmp resolution failed", ErrorLevel::SEV);
-        return false;
-    }
-
-    // update given fn address to resolved one
-    m_fnAddress = insts.front().getAddress();
+//    if (!followJmp(insts)) {
+//        Log::log("Prologue jmp resolution failed", ErrorLevel::SEV);
+//        return false;
+//    }
+//
+//    // update given fn address to resolved one
+//    m_fnAddress = insts.front().getAddress();
 
     if (!allocate_jump_to_callback()) {
         return false;
